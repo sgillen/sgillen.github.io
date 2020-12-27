@@ -17,44 +17,8 @@ So, that's Easy enough, I could roll my own HTML (I still might, I do like to da
 
 Anyway, that's what you are looking at now. I just write a blog post with some markdown and when I commit and push the changes up, github updates my website for me.
 
-I started following the instruction [here](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll
-), though I can tell you I found that a lot of their commands didn't work for me, so I decided to put what I did do here.
+from there I just followed the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll).
 
-First, I needed to install ruby and gem, which is a language and an installer for that language respectively. MacOS actually ships with these, but something was not quite right with my native versions, I instead opted to install them fresh from homebrew:
+I have to say I'm not totally satisfied with this setup. I had to fumble around with versioning and permission issues with ruby, gem, bundler, and jekyll. It seems like everytime I try to run jekyll serve, something goes wrong and I have to install something. Surely this is my fault, likely having to do with having several different versions of these different tools on my system. But still, this seems like a lot of overhead to just serve some HTML. I'm sure at some point I'll hand write my own HTML and serve it from a server I own, I just like that idea better. 
 
-```
-brew install ruby
-```
-
-I am 90% sure this also installs gem, the ruby package manager. Now as I mentioned earlier we have another copy of ruby installed already on our system, let's just overwrite our system path to ignore it, add the following to zshrc:
-
-```
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-```
-
-Fine, now after sourcing this file, we can install jekyll with our new version of gem. 
-
-```
-gem install jekyll
-```
-
-Now, clone the github page you've made for yourself. For me this was:
-
-```
-git clone https://github.com/sgillen/sgillen.github.io 
-```
-
-Now I just do:
-
-```
-cd sgillen.github.io
-jekyll 4.2.0 new .
-```
-
-Bingo bango. Now I have a blank Jekyll website. After fudging around a bit I found I can edit about.md, _config.yml, and add posts to _posts/$(post_name).md
-That's basically what I've done here.
-
-Cool hope you enjoyed this trash tier blog post that I'll probably take down almost immediately.
-Still writing practice is good.
-
-
+But for now, this will do, and it's surely the right solution for a lot of people. The website is attractive, and once it's set up it really is pretty easy. 
