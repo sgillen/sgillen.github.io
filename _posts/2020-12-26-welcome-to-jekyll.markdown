@@ -26,16 +26,35 @@ First, I needed to install ruby and gem, which is a language and an installer fo
 brew install ruby
 ```
 
-Then using rubies gem installer
+I am 90% sure this also installs gem, the ruby package manager. Now as I mentioned earlier we have another copy of ruby installed already on our system, let's just overwrite our system path to ignore it, add the following to zshrc:
+
+```
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+```
+
+Fine, now after sourcing this file, we can install jekyll with our new version of gem. 
 
 ```
 gem install jekyll
 ```
 
-clone the github page you've made for yourself. For me this was 
+Now, clone the github page you've made for yourself. For me this was:
 
 ```
 git clone https://github.com/sgillen/sgillen.github.io 
 ```
+
+Now I just do:
+
+```
+cd sgillen.github.io
+jekyll 4.2.0 new .
+```
+
+Bingo bango. Now I have a blank Jekyll website. After fudging around a bit I found I can edit about.md, _config.yml, and add posts to _posts/$(post_name).md
+That's basically what I've done here.
+
+Cool hope you enjoyed this trash tier blog post that I'll probably take down almost immediately.
+Still writing practice is good.
 
 
