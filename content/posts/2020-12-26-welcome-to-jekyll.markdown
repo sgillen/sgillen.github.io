@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Making a Github Pages page"
 date:   2020-12-26 20:05:43 -0500
 categories: Web
